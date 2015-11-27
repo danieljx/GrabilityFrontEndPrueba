@@ -1,6 +1,5 @@
-grey		= #777
-greyDark	= #E8E8E8
-greyLight	= #C9C9C9
+grey		= #C9C9C9
+greyDark	= #444
 orange 		= #FF6654
 orangeLight	= #FF958C
 green		= #C7F04B
@@ -13,47 +12,75 @@ blue		= #2FC3CB
 	float right
 
 body
-	background grey
+	background #394C5F
 	color greyDark
 	font-family Arial
 	font-size 16px
-	padding 2em 
+	padding 1em 
 	
 header
 	background orange
+	border-radius 1em 1em 0 0
 	color white
+	overflow hidden
 	padding 1em
-	border-radius 2em 2em 0 0
+	position relative
 	
 	.menu
 		width 60px
 		
 		span
-			width 52px
+			font-size 2em
+			margin 12px 0 0 15px
 			height	52px
+			width 52px
 		
-		span before
-			content \2630
+			&:before
+				content "\2630"
 			
 	.titler
-		margin 0 0 0 80px
+		margin 12px 0 0 80px
 		
 		.title
+			color orangeLight
 			font-size 18px
 			font-weight normal
-			color orangeLight
 			margin 0
 			padding 0
 			
 section
-	background white
+	background grey
+	padding 1em 2.5em
 	
 	.post
+		background	white
+		margin-bottom 8px
+		overflow hidden
 		
-		.article
+		.picture
+			margin 0 15px 0 0
+			padding 1em
 			
+			span
+				background-color blue
+				border-radius 50%
+				display block
+				height 60px
+				margin 0 auto
+				width 60px
+				
+		&:nth-child(even)
 			.picture
-				  
-				img
-					width 60px
-					border-radius 50%
+				span
+					background-color green
+			
+			img
+				border-radius 50%
+				width 60px
+				
+		.titler
+			margin-top 30px
+			
+			.title
+				color greyDark
+				font-weight bold
