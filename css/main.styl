@@ -26,14 +26,24 @@ body
 				.navbar-btn
 					background orange
 					border-color orange
-					
+					&:focus
+						color orange
+						outline thin dotted
+						outline 5px auto orange
+						outline-offset -2px
+						text-decoration none
+					&:active
+						-webkit-box-shadow inset 5px 5px 5px rgba(0, 0, 0, .125)
+						box-shadow inset 5px 5px 5px rgba(0, 0, 0, .125)
+						
 					.icon-bar
 						background-color white
 						border-radius 1px
 						display block
-						margin-bottom 10px
 						height 10px
 						width 50px
+						&:nth-child(odd)
+							margin-bottom 10px
 
 				.navbar-brand
 					color orangeLight
@@ -73,7 +83,20 @@ body
 					font-weight bold
 					margin-top 35px
 
-
+			.details
+				background	white
+				margin-bottom 8px
+				min-height 300px
+				
+				figure
+					margin-right 6%
+					
+				.body
+					padding 2em 4em
+					
+					.titler
+						color grey
+			
 @media screen and (max-width: 768px)
 
 	body 
