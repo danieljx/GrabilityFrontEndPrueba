@@ -5,112 +5,88 @@ orangeLight	= #FF958C
 green		= #C7F04B
 blue		= #2FC3CB
 
-.left
-	float left
-
-.right
-	float right
-
 body
 	background #394C5F
-	color greyDark
-	font-family Arial
-	font-size 16px
-	padding 1em 
 	
-header
-	background orange
-	border-radius 1em 1em 0 0
-	color white
-	overflow hidden
-	padding 1em
-	position relative
+	.container
+		padding-top 15px
 	
-	.menu
-		width 60px
-		
-		span
-			font-size 2em
-			margin 12px 0 0 15px
-			height	52px
-			width 52px
-		
-			&:before
-				content "\2630"
-			
-	.titler
-		margin 12px 0 0 80px
-		
-		.title
-			color orangeLight
-			font-size 18px
-			font-weight normal
-			margin 0
-			padding 0
-			
-section
-	background grey
-	padding 1em 2.5em
-	
-	.post
-		background	white
-		margin-bottom 8px
-		overflow hidden
-		
-		.picture
-			margin 0 15px 0 0
+		nav
+			background orange
+			border-color transparent
+			border-radius 1em 1em 0 0
+			color white
+			margin-bottom 0
+			overflow hidden
 			padding 1em
 			
-			span
-				background-color blue
-				border-radius 50%
-				display block
-				height 60px
-				margin 0 auto
-				width 60px
-				overflow hidden
+			.navbar-header
+				float none
 				
-				img
-					height 60px
-					width 60px
+				.navbar-btn
+					background orange
+					border-color orange
 					
+					.icon-bar
+						background-color white
+						border-radius 1px
+						display block
+						margin-bottom 10px
+						height 10px
+						width 50px
+
+				.navbar-brand
+					color orangeLight
+					float none
+					font-size 18px
+					font-weight normal
+					margin 20px 0 0 8%
+					padding 0
+		.content
+			overflow hidden
+			
+		section
+			background grey
+			padding 1em 3em
+			
+			.post
+				background	white
+				margin-bottom 8px
+				min-height 110px
+				height auto
+				padding 5px
+				
+				.picture
+					padding 1em
 					
-		&:nth-child(even)
-			.picture
-				span
-					background-color green
-			
-			img
-				border-radius 50%
-				width 60px
-				
-		.titler
-			margin-top 30px
-			
-			.title
-				color grey
-				font-weight bold
-		
-	.details
-		background	white
-		margin-bottom 8px
-		overflow hidden
-		
-		figure
-			margin 0
-		
-		.body
-			margin-left 300px
-			padding 3em
-			
-			.titler
-			
-				.title	
-					color grey
-				
-			
-			.content
+					span
+						background-color blue
+						
+						img
+							height 80px
+							width 80px
+							
 				
 				p
-					text-align left
+					color grey
+					font-size 24px
+					font-weight bold
+					margin-top 35px
+
+
+@media screen and (max-width: 768px)
+
+	body 
 	
+		.container
+		
+			nav 
+				.container-fluid
+					.navbar-header
+						.navbar-brand
+							margin 0 0 0 8%
+			
+			section
+				.post
+					p
+						margin-top 2px
