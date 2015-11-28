@@ -4,7 +4,6 @@
 
 import express from 'express';
 import http from 'http';
-import engine from 'socket.io';
 import dbapi from './db-api';
 
 const port = 8000;
@@ -26,11 +25,3 @@ app.get('/', (req, res) => {
 let server = http.createServer(app).listen(port, () => {
   console.log(`El servidor está escuchando en el puerto ${port}`);
 });
-
-const io = engine.listen(server);
-
-io.on('connection', (socket) => {
-  socket.on('message', (msg) => {
-    io.emit('message', msg);
-  })
-})

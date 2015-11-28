@@ -4,15 +4,15 @@
     "babel": "^5.5.8",
     "babelify": "^6.1.2",
     "browserify": "^10.2.4",
+    "clean-css": "^3.4.8",
     "express": "^4.12.4",
     "jquery": "^2.1.4",
     "react": "^0.13.3",
-    "socket.io": "^1.3.5",
-    "socket.io-client": "^1.3.5",
     "uid": "0.0.2"
   },
   "scripts": {
-    "build": "browserify app.js > public/app.js -t babelify",
+    "buildJs": "browserify app.js > public/app.js -t babelify",
+    "buildCss": "cleancss -o public/app.css ui/css/main.css",
     "start": "babel-node index.js"
   }
 }
