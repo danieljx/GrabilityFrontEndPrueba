@@ -14,6 +14,9 @@ html, body
 body
 	background #394C5F
 
+	#container
+		display none
+
 	.container
 		padding-top 15px
 
@@ -65,53 +68,57 @@ body
 		section
 			background grey
 			padding 2% 4%
+			height 90vh
 			
-			.post
-				background white
-				margin-bottom 8px
-				height 85px
-				padding 5px
-				
-				.picture
-					padding 1%
+			div.col-sm-12
+				display none
+		
+				.post
+					background white
+					margin-bottom 8px
+					height 85px
+					padding 5px
 					
-					span
-						background-color blue
+					.picture
+						padding 1%
 						
-						img
-							height 60px
-							width 60px
+						span
+							background-color blue
 							
-				
-				.title
-					color grey
-					font-size 24px
-					font-weight bold					
-					overflow hidden
-					white-space nowrap
-					text-overflow ellipsis
-					width 70%
-					font-size 16px
-					float left
-					padding 15px 15px
+							img
+								height 60px
+								width 60px
+								
+					
+					.title
+						color grey
+						font-size 24px
+						font-weight bold					
+						overflow hidden
+						white-space nowrap
+						text-overflow ellipsis
+						width 70%
+						font-size 16px
+						float left
+						padding 15px 15px
 
-			.details
-				background	white
-				margin-bottom 8px
-				min-height 300px
-				display none 
-				
-				.picture
-					margin-right 6%
+				.details
+					background	white
+					margin-bottom 8px
+					min-height 300px
+					display none 
 					
-				.body
-					padding 4% 6%
-					
-					.titler
-						.title
-							color grey
-							font-weight bold
-							font-size 16px
+					.picture
+						margin-right 6%
+						
+					.body
+						padding 4% 6%
+						
+						.titler
+							.title
+								color grey
+								font-weight bold
+								font-size 16px
 			
 @media screen and (max-width: 768px)
 
