@@ -4,9 +4,10 @@ Prueba de FrontEnd (Gability)
 ## Instrucciones
 
 ```
-npm install
-npm run buildJs
-npm run buildCss
-npm start
+- crear carpeta public en la raiz
+- npm install
+- npm run buildJs
+- npm run buildCss
+- npm start
 
 ```
