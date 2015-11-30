@@ -5,6 +5,8 @@ Prueba de FrontEnd (Gability)
 
 ```
 npm install
-npm run build
+npm run buildJs
+npm run buildCss
 npm start
+
 ```
