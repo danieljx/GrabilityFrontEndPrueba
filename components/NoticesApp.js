@@ -12,7 +12,7 @@ import velocity from 'velocity-animate';
 export default class NoticesApp extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state 	= { notices: [], dataStatus: null };
+		this.state 	= { notices: [], dataStatus: null, show: false };
 		this.user 	= uid(10);
 		this.upData = this.upData.bind(this);
 	}

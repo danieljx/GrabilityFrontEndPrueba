@@ -6,7 +6,7 @@ import React from 'react';
 
 export default class Article extends React.Component {
   render() {
-    return <div className="col-sm-12">
+    return <div className="col-sm-12" id={this.props.notice.id}>
 			<article className="details">
 				<figure className="picture pull-left">
 					<span>

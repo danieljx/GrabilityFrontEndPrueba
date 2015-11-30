@@ -3,9 +3,14 @@
  */
 
 import React from 'react';
+import $ from 'jquery';
 import velocity from 'velocity-animate';
 
 export default class Article extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state 	= { show: false };
+	}
 	componentDidMount() {
 		this.showAnimate();
 	}
@@ -13,7 +18,28 @@ export default class Article extends React.Component {
 		this.showDetails(this.props.notice)
 	}
 	showDetails(notice) {
-		console.log(notice);
+		var details = $('#' + this.props.notice.id);
+		if(!this.state.show) {
+			velocity(details,{
+				translateY: [15, 500],
+				opacity: [1, 0]
+			}, {
+				duration: 800,
+				display: 'block',
+				easing: [70,8]
+			});
+			this.setState({ show: true });
+		} else {
+			velocity(details,{
+				translateY: [500, 15],
+				opacity: [1, 0]
+			}, {
+				duration: 800,
+				display: 'none',
+				easing: [70,8]
+			});
+			this.setState({ show: false });
+		}
 	}
 	showAnimate() {
 		var node = this._div.getDOMNode();
@@ -44,7 +70,7 @@ export default class Article extends React.Component {
 							<img src={this.props.notice.image} className="img-circle" onClick={this.onClick.bind(this)} />
 						</span>
 					</figure>
-					<a className="title">{this.props.notice.title}</a>
+					<a className="title">{this.props.notice.title}  onClick={this.onClick.bind(this)}</a>
 				</article>
 			</div>
 	}
